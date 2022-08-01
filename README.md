@@ -1,6 +1,6 @@
 # Fattorizzazione LU
 
-In algebra lineare la fattorizzazione LU è utile per _decomporre_ una matrice di partenza $A$ nel prodotto di altre tre matrici:
+In algebra lineare la fattorizzazione LU è utile per _decomporre_ una matrice di partenza $A$ nel prodotto che coinvolge altre tre matrici:
 
 * $L$ triangolare inferiore speciale
 * $U$ triangolare superiore
@@ -10,7 +10,7 @@ dove:
 
 $$ PA = LU $$
 
-Generalmente utilizzata per risolvere sistemi di equazioni lineari, risolvendo:
+Generalmente utilizzata per risolvere sistemi di equazioni lineari, andando poi a risolvere:
 
 $$
 \begin{cases}
@@ -20,17 +20,18 @@ $$
 $$
 La risoluzione di questo sistema permette la determinazione del vettore x cercato.
 
-## Esempio di fattorizzazione LU
+----
 
+## Esempio di fattorizzazione LU
+Sia 
 $A^{(0)} =\begin{bmatrix}
 1 & 2 & -1 & -4 \\
 -2 & -4 & 0 & -1 \\
 -4 & 0 & 1 & -3 \\
 -2 & 1 & 2 & 4 
 \end{bmatrix}$
-
-Inizializziamo:
-
+,
+inizializziamo:
 $P^{(0)} =\begin{bmatrix}
 1 \\
 2 \\

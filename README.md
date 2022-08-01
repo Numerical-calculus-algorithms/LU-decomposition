@@ -18,38 +18,40 @@ $$
     Ux = y 
 \end{cases}
 $$
+
 La risoluzione di questo sistema permette la determinazione del vettore x cercato.
 
 ----
 
 ## Esempio di fattorizzazione LU
-Sia 
-$A^{(0)} =\begin{bmatrix}
+Sia
+
+$$
+A^{(0)} =\begin{bmatrix}
 1 & 2 & -1 & -4 \\
 -2 & -4 & 0 & -1 \\
 -4 & 0 & 1 & -3 \\
 -2 & 1 & 2 & 4 
-\end{bmatrix}$
+\end{bmatrix}
 ,
-inizializziamo:
-$P^{(0)} =\begin{bmatrix}
+P^{(0)} =\begin{bmatrix}
 1 \\
 2 \\
 3 \\
 4
-\end{bmatrix}$
-ed 
-$L^{(0)} =\begin{bmatrix}
+\end{bmatrix}
+, 
+L^{(0)} =\begin{bmatrix}
 1 & 0  & 0  & 0   \\
   & 1  & 0  & 0 \\
   &    & 1  & 0  \\
   &    &    & 1 
-\end{bmatrix}$
+\end{bmatrix}
+$$
 
 __1° passo__) Prendendo in considerazione la prima colonna, dobbiamo portare l'elemento più grande (valore assoluto) in posizione pivotale, ci serviamo della matrice $P$:
 
 $$
-
 P^{(1)} =\begin{bmatrix}
 3 \\
 2 \\
@@ -161,21 +163,19 @@ Infine otteniamo:
 $$PA = LU$$
 
 $$
-
 \begin{bmatrix}
 0 & 0 & 1 & 0 \\
 0 & 1 & 0 & 0 \\
 0 & 0 & 0 & 1 \\
 1 & 0 & 0 & 0 
 \end{bmatrix}
-
 \begin{bmatrix}
 1 & 2 & -1 & -4 \\
 -2 & -4 & 0 & -1 \\
 -4 & 0 & 1 & -3 \\
 -2 & 1 & 2 & 4 
 \end{bmatrix}
-= 
+\=
 \begin{bmatrix}
 1    & 0  & 0  & 0   \\
 1/2  & 1  & 0  & 0 \\

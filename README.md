@@ -193,10 +193,16 @@ $$
 ---
 ## Analisi errore
 
-L'analisi è stata effettuata prendendo in esame  una matrice casuale del tipo $A^{20 \times 20}$
+L'analisi è stata effettuata prendendo in esame una matrice casuale del tipo $A^{20 \times 20}$
 
 <div align="center">
   <img src="img/err_1.png"/>  
 </div>
 
 Oss. L'errore accumulato lungo la prima riga è nullo, piochè l'algoritmo la lascia intatta, successivamente man mano che scorriamo le righe in basso, l'ordine di grandezza dell'errore aumenta, causa del fatto che gli elementi in questione sono stati modellati più volte dall'algoritmo, accumulando così molteplici errori di calcolo. 
+
+L'immagine è stata generata a partire da:
+
+```matlab
+imagesc(log10(abs(A-L*U)))
+```
